@@ -28,7 +28,7 @@ Cenário: Deve calcular atraso na entrega
 	Quando a entrega atrasar em 2 dias
 	Então a entrega sera efetuada em 07/04/2018
 		
-@ignore
+
 Cenário: Deve calcular atraso no prazo de entrega china
 	Dado que o prazo é dia 05/04/2018
 	Quando a entrega atrasar em 2 meses  
@@ -50,7 +50,7 @@ Cenário: Deve reaproveitar os steps "Dado" do cenário anterior
     Dado que o nome do passageiro é "Cicrano de Oliveira"
     Dado que o telefone do passageiro é 9888-8888
 
-@ignore
+
 Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
     Dado que o ticket é CD123
     Dado que o ticket é AG1234

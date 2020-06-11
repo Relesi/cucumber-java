@@ -8,9 +8,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/feature/cucumber.feature",
+		features = "src/test/resources/features/alugar_filme.feature",
 		glue = "br.com.renato.steps", 
-		tags = "~@ignore",
+		tags = {},
 		plugin = "pretty", 
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
@@ -20,3 +20,5 @@ import cucumber.api.junit.Cucumber;
 public class Runner {
 
 }
+
+
