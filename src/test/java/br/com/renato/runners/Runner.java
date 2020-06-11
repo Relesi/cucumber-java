@@ -1,3 +1,5 @@
+package br.com.renato.runners;
+
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -6,6 +8,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		features = "src/test/resources/feature/cucumber.feature",
+		glue = "br.com.renato.steps", 
+		tags = "~@ignore",
 		plugin = "pretty", 
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,

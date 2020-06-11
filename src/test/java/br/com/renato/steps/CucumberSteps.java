@@ -1,3 +1,5 @@
+package br.com.renato.steps;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -5,12 +7,13 @@ import java.util.Date;
 
 import org.junit.Assert;
 
+import br.com.renato.converters.DateConverter;
 import cucumber.api.Transform;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
-public class Cucumber {
+public class CucumberSteps {
 
 	@Dado("^creat file$")
 	public void creatFile() throws Throwable {
@@ -22,6 +25,7 @@ public class Cucumber {
 	public void run() throws Throwable {
 
 	}
+	
 
 	@Então("^The especification must with success$")
 	public void theEspecificationMustWithSuccess() throws Throwable {
@@ -81,6 +85,7 @@ public class Cucumber {
 		Assert.assertEquals(data, dataFormatada);
 	}
 	
+
 	
 	
 	//novo cenarios
