@@ -1,3 +1,5 @@
+import org.junit.Assert;
+
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -35,9 +37,11 @@ public class Cucumber {
 
 	@Então("^The value contactor It will be (\\d+)$")
 	public void the_value_contactor_It_will_be(int arg1) throws Throwable {
-	   System.out.println(arg1);
-	   System.out.println(contador);
-	   System.out.println(arg1 == contador);
+//	   System.out.println(arg1);
+//	   System.out.println(contador);
+//	   System.out.println(arg1 == contador);
+	   //Assert.assertTrue(arg1 == contador);
+	   Assert.assertEquals(contador, arg1);
 	}
 
 }

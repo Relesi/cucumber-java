@@ -11,7 +11,7 @@ Cenário: Must run espcifications
 	
 Cenário: Must increment the contactor
 	Dado that the contactor value  is 15
-	Quando I increment in 5
+	Quando I increment in 3
 	Então The value contactor It will be 18
 	
 
