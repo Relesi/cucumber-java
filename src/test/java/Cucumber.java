@@ -1,23 +1,24 @@
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.Então;
+import cucumber.api.java.pt.Quando;
 
 public class Cucumber {
 	
 
-@Given("^creat file$")
+@Dado("^creat file$")
 public void creat_file() throws Throwable {
   
 }
 
-@When("^Run$")
+@Quando("^Run$")
 public void run() throws Throwable {
-   
+    
 }
 
-@Then("^The especification must with success$")
+@Então("^The especification must with success$")
 public void the_especification_must_with_success() throws Throwable {
-   
+  
 }
+
 
 }

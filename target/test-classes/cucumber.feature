@@ -1,11 +1,15 @@
-Feature: Cucumber
+#language: pt
 
-		I want run cucumber
+Funcionalidade: Cucumber 
+  	I want run cucumber
+
+
+Cenário: Must run espcifications 
+	Dado creat file
+	Quando Run
+	Então The especification must with success
 		
-
-Scenario: Must run espcifications 
-
-		Given creat file
-		When 	Run 
-		Then The especification must with success 
+		
+		
+		
 		
