@@ -1,5 +1,4 @@
-package br.com.renato.runners;
-
+package com.renato.runners;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -9,16 +8,12 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/features/alugar_filme.feature",
-		glue = "br.com.renato.steps", 
+		glue = "com.renato.steps",
 		tags = {},
-		plugin = "pretty", 
+		plugin = {"pretty", "html:target/report-html"},
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
-		dryRun = false, 
-		strict = false
-)
-public class Runner {
+		strict = true)
+public class RunnerTest {
 
 }
-
-
