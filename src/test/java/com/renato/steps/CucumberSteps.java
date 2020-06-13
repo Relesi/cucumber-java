@@ -7,7 +7,7 @@ import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
-public class AprenderCucumberSteps {
+public class CucumberSteps {
 	
 	@Dado("que criei o arquivo corretamente")
 	public void que_criei_o_arquivo_corretamente() {
