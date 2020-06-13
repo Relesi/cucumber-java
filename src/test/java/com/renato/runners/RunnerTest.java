@@ -10,8 +10,8 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources/features/alugar_filme.feature",
 		glue = "com.renato.steps",
 		tags = {},
-		plugin = {"pretty", "html:target/report-html"},
-		monochrome = true,
+		plugin = {"pretty", "html:target/report-html", "json:target/report.json"},
+		monochrome = false,
 		snippets = SnippetType.CAMELCASE,
 		strict = true)
 public class RunnerTest {
@@ -19,6 +19,5 @@ public class RunnerTest {
 }
 
 
-//glue="src/test/java/steps"
-
-//
+//features = "classpath:features/checkbox")
+//@CucumberOptions(features="Features/ChromeTest.feature",glue= {"src/test/java/Steps"})
