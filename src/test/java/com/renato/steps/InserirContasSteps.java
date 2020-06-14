@@ -1,5 +1,10 @@
 package com.renato.steps;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,13 +17,6 @@ import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
-
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.junit.Assert;
 
 public class InserirContasSteps {
 
@@ -111,7 +109,7 @@ public class InserirContasSteps {
 	}
 
 	//Cucumber injeta cenario
-	@After(order = 1)
+	@After(order = 1, value = {"@funcionais"})
 	public void screenshot(Scenario cenario) {
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -121,7 +119,7 @@ public class InserirContasSteps {
 		}
 	}
 
-	@After(order = 0)
+	@After(order = 0, value = {"@funcionais"})
 	public void fecharBrowser() {
 		driver.quit();
 		System.out.println("terminando");
