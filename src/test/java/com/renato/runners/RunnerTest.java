@@ -1,5 +1,9 @@
 package com.renato.runners;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -9,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features/inserir_conta.feature",
 		glue = "com.renato.steps",
-		tags = {"~@ignore"},
+		tags = {},
 		plugin = {"pretty", "html:target/report-html", "json:target/report.json"},
 		monochrome = false,
 		snippets = SnippetType.CAMELCASE,
@@ -17,9 +21,16 @@ import cucumber.api.junit.Cucumber;
 		strict = false
 		)
 public class RunnerTest {
+	
+	//@BeforeClass
+	public static void reset() {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://srbarriga.herokuapp.com");
+		driver.findElement(By.id("email")).sendKeys("rock@rock");
+		driver.findElement(By.name("senha")).sendKeys("rock");
+		driver.findElement(By.tagName("button")).click();
+		driver.findElement(By.linkText("reset")).click();
+		driver.quit();
+	}
 
 }
-
-
-//features = "classpath:features/checkbox")
-//@CucumberOptions(features="Features/ChromeTest.feature",glue= {"src/test/java/Steps"})
