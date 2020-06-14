@@ -19,13 +19,11 @@ E informo a conta "Contas de Teste"
 E seleciono Salvar
 Então a conta é inserida com sucesso
 
-
 Cenário: Não deve inserir uma conta sem nome
 E seleciono Salvar
 Então sou notificado que o nome da conta é obrigatório
 
-
 Cenário: Não deve inserir uma conta com nome já existente
 E informo a conta "Conta mesmo nome"
 E seleciono Salvar
-Então sou notificado que já existe uma conta com esse nome
+Então sou notificado que já existe uma conta com esse nome 

@@ -1,14 +1,23 @@
 package com.renato.steps;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.Assert;
 
 public class InserirContasSteps {
@@ -82,17 +91,40 @@ public class InserirContasSteps {
 		String texto = driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText();
 		Assert.assertEquals("Já existe uma conta com esse nome!", texto);
 	}
-	
-	@Before
+
+	@Então("recebo a mensagem {string}")
+	public void receboAMensagem(String arg1) {
+		String texto = driver.findElement(By.xpath("//div[starts-with(@class, 'alert alert-']")).getText();
+		Assert.assertEquals(arg1, texto);
+	}
+
+	// HOOKS
+
+	@Before(order = 10)
 	public void inicio() {
 		System.out.println("Começando aqui");
 	}
 	
-	@After
+	@Before(order = 0)
+	public void inicio2() {
+		System.out.println("Começando aqui parte 2");
+	}
+
+	//Cucumber injeta cenario
+	@After(order = 1)
+	public void screenshot(Scenario cenario) {
+		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(file, new File("target/screenshot/"+cenario.getId()+".jpg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@After(order = 0)
 	public void fecharBrowser() {
 		driver.quit();
 		System.out.println("terminando");
 	}
-	
 
 }
