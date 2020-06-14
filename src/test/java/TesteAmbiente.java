@@ -9,7 +9,7 @@ public class TesteAmbiente {
 	
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://srbarriga.herokuapp.com");
-		driver.get("http://renato.relesi.com.br/");
+		//driver.get("http://renato.relesi.com.br/");
 			
 	}
 
