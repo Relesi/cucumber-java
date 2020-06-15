@@ -3,4 +3,4 @@
 # Cucumber-Java
 Desnvolvimento de teste unitários e funcionáis.
 
-Utilizando Cucumber e Selenium. 
+Utilizando Cucumber e Selenium para testes de cenarios.
