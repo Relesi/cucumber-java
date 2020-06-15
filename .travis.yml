@@ -1,10 +1,12 @@
-  language: java
+language: java
+
+dist: trusty
+
 jdk:
-  - oraclejdk7
-  - oraclejdk8
-  - oraclejdk9
-  - oraclejdk11
-before_install:
-  - cd app
-script: mvn clean verify
-sudo: disable
+    - openjdk7
+    - oraclejdk7
+    - oraclejdk8
+
+cache:
+    directories:
+        - $HOME/.m2
