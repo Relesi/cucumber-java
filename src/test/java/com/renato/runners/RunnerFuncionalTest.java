@@ -1,4 +1,5 @@
 package com.renato.runners;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
