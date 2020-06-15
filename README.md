@@ -23,8 +23,8 @@ dentro do contexto de cada regra de negócio.
 
 Referências para o desenvolvimento do modelo de testes.
 
-https://github.com/cucumber/cucumber
-https://github.com/SeleniumHQ/selenium
+* https://github.com/cucumber/cucumber
+* https://github.com/SeleniumHQ/selenium
 
 
 ### Aplicação hospedada no Heroku
