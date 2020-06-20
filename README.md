@@ -74,6 +74,6 @@ Depois que o projeto estiver importado, mude o application para test e execute o
 mvn clean install
 mvn install 
 
-Maven - update project
+maven - update project
 
 
