@@ -26,6 +26,12 @@ Referências para o desenvolvimento do modelo de testes.
 * https://github.com/cucumber/cucumber
 * https://github.com/SeleniumHQ/selenium
 
+###
+
+Utilizo o travis-ci para integração continua.
+
+* https://travis-ci.org/
+
 
 ### Aplicação hospedada no Heroku
 
