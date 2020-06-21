@@ -16,7 +16,7 @@ Quando seleciono Contas
 E seleciono Adicionar
 
 Cenário: Deve inserir uma conta com sucesso
-E informo a conta "Contas de Teste"
+E informo a conta "Contas de Teste1"
 E seleciono Salvar
 Então a conta é inserida com sucesso
 
