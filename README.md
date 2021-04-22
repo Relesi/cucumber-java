@@ -72,7 +72,10 @@ No Eclipse/STS, importe o projeto como projeto Maven.
 Depois que o projeto estiver importado, mude o application para test e execute os seguintes comandos. 
 
 mvn clean install
+
 mvn install 
+
+mvn build 
 
 maven - update project
 
