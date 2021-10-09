@@ -79,4 +79,5 @@ mvn build
 
 maven - update project
 
+- Branch update to .CI travis for automated validation
 
